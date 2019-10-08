@@ -1,230 +1,172 @@
-<!DOCTYPE html>
 <html>
     <head>
-      <title>Panel Doctor | DoctorOnCall</title>
-      <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords" content="Online Pharmacy, Buy precsription and OTC medicines, consult doctor online, book doctor appointments, ask free health questions">
-      <meta name="description" content="Buy prescription & OTC medicines online on DoctorOnCall's pharmacy. Book appointment with doctors & hospitals, ask free health questions,consult specialist online. Get 20% off & free delivery on purchase of medicines">
-      <meta name="author" content="">
-      <meta property="og:url" content="https://www.doctoroncall.com.my/">
-      <meta property="og:type" content="website">
-      <meta property="og:title" content="Malaysia's Online Pharmacy | Order Medicine, Consult Doctor Online">
-      <meta property="og:image" itemprop="image" content="https://www.doctoroncall.com.my/images/og_image_doc.png">
-      <meta property="og:description" content="Buy prescription & OTC medicines online on DoctorOnCall's pharmacy. Book appointment with doctors & hospitals, ask free health questions,consult specialist online. Get 20% off & free delivery on purchase of medicines">
-      <meta property="og:locale" content="en_US">
-      <meta name="url" content="https://www.doctoroncall.com.my/">
-      
-      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-      <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-      <link rel="apple-touch-icon" href="images/doctorOnCall-icon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap-asraf/bootstrap-grid.min.css">
-        <link rel="stylesheet" type="text/css" href="./stylesheets/style-asraf.css">
-
+      <title>Career | DoctorOnCall</title> 
+        <meta name="active-menu" content="">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Online Pharmacy, Buy precsription and OTC medicines, consult doctor online, book doctor appointments, ask free health questions">
+        <meta name="description" content="Buy prescription & OTC medicines online on DoctorOnCall's pharmacy. Book appointment with doctors & hospitals, ask free health questions,consult specialist online. Get 20% off & free delivery on purchase of medicines">
+        <meta name="author" content="">
+        <meta property="og:url" content="https://www.doctoroncall.com.my/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Malaysia's Online Pharmacy | Order Medicine, Consult Doctor Online">
+        <meta property="og:image" itemprop="image" content="https://www.doctoroncall.com.my/images/og_image_doc.png">
+        <meta property="og:description" content="Buy prescription & OTC medicines online on DoctorOnCall's pharmacy. Book appointment with doctors & hospitals, ask free health questions,consult specialist online. Get 20% off & free delivery on purchase of medicines">
+        <meta property="og:locale" content="en_US">
+        <meta name="url" content="https://www.doctoroncall.com.my/">
+        
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="images/doctorOnCall-icon.png">
+        <link rel="stylesheet" href="./stylesheets/bootstrap-ameera/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="./stylesheets/style-ameera.css">
+        
 
         <script>
-            function redirectSignUp(){
-            window.location.href= window.location.origin+"/patient#/signin?callback="+window.location.href;
+          function redirectSignUp(){
+          window.location.href= window.location.origin+"/patient#/signin?callback="+window.location.href;
+          }
+          function checkLogin(){  
+            var user=JSON.parse(window.localStorage.getItem("userDetails"))
+            
+            if(user){   
+              document.getElementById("header-login-signup").style.display="none";
+              document.getElementById("header-login-account").style.display="inline-block";
+              document.getElementById("header-login-account").style.visibility="visible";
+              document.getElementById("header-login-signup-mobile").style.display="none"; 
+              document.getElementById("header-login-account-mobile").style.display="inline-block";
+            }else{ 
+              document.getElementById("header-login-signup").style.display="inline-block";
+              document.getElementById("header-login-account").style.display="none";
+              document.getElementById("header-login-signup-mobile").style.display="inline-block";
+              document.getElementById("header-login-account-mobile").style.display="none";
             }
-            function checkLogin(){  
-              var user=JSON.parse(window.localStorage.getItem("userDetails"))
-              
-              if(user){   
-                document.getElementById("header-login-signup").style.display="none";
-                document.getElementById("header-login-account").style.display="inline-block";
-                document.getElementById("header-login-account").style.visibility="visible";
-                document.getElementById("header-login-signup-mobile").style.display="none"; 
-                document.getElementById("header-login-account-mobile").style.display="inline-block";
-              }else{ 
-                document.getElementById("header-login-signup").style.display="inline-block";
-                document.getElementById("header-login-account").style.display="none";
-                document.getElementById("header-login-signup-mobile").style.display="inline-block";
-                document.getElementById("header-login-account-mobile").style.display="none";
-              }
-            }
-            // Add event listener
-            document.addEventListener('DOMContentLoaded', function () { 
-              try{checkLogin()}catch(e){console.log(e.message)}
-            }); 
-          </script> 
+          }
+          // Add event listener
+          document.addEventListener('DOMContentLoaded', function () { 
+            try{checkLogin()}catch(e){console.log(e.message)}
+          }); 
+        </script> 
     </head>
 
     <body>
-
-        <!-- start of header -->
+      <!-- start of header -->
 <!-- start container for header -->
 <header class="container-fluid header">
-    <!-- start a tag for logo -->
-    <a href="https://www.doctoroncall.com.my"> <img class="header-logo" src="images/doctorOnCall-icon.png" alt="DoctorOnCall logo" loading="lazy">
-    </a>
-    <!-- end of a tag for logo -->
-    <input class="header-menu-btn" type="checkbox" id="menu-btn" />
-    <label class="header-menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  
-    <!-- start ul for content in header -->
-    <div class="header-menu">
-  
-      <!--Mobile only login design-->
-      <div class="icon-userlogin mobile-only">
-        <!--<img src="/images/default-user.svg"> Container for user image-->
-        <a id="header-login-account-mobile" href="www.doctoroncall.com.my/patient#/dashboard">
-        <svg viewBox="0 0 172 172">
-          <path d="M0,172v-172h172v172z" fill="none"></path>
-          <path
-            d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z"
-            fill="#ebebeb"></path>
-          <path
-            d="M103.01725,106.50563c-0.4085,-4.43975 -0.24725,-7.53575 -0.24725,-11.5885c2.01025,-1.0535 5.6115,-7.77225 6.2135,-13.44825c1.58025,-0.129 4.07425,-1.66625 4.80525,-7.75075c0.387,-3.268 -1.17175,-5.10625 -2.1285,-5.68675c2.56925,-7.72925 7.912,-31.648 -9.8685,-34.1205c-1.83825,-3.21425 -6.52525,-4.8375 -12.60975,-4.8375c-24.37025,0.4515 -27.305,18.404 -21.96225,38.958c-0.95675,0.5805 -2.5155,2.41875 -2.1285,5.68675c0.74175,6.0845 3.225,7.62175 4.80525,7.75075c0.602,5.676 4.343,12.39475 6.364,13.44825c0,4.05275 0.1505,7.14875 -0.258,11.5885c-4.816,12.9645 -37.3455,9.32025 -38.8505,34.32475h104.576c-1.505,-25.0045 -33.89475,-21.36025 -38.71075,-34.32475z">
-          </path>
-          <path
-            d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z"
-            fill="none"></path>
-          <path
-            d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z"
-            fill="none"></path>
-        </svg>Sign Up / Login</a>
-        <a id="header-login-signup-mobile"  onclick="redirectSignUp()" href="/patient#/signup"> Sign Up / Login </a>
-      </div>
-  
-      <div class="header-menu-div"> <a class="header-link" href="www.doctoroncall.com.my/medicine">Order Medicine</a>
-      </div>
-      <div class="header-menu-div"> <a class="header-link"
-          href="www.doctoroncall.com.my/find-doctor">Book Appointment </a></div>
-      <div class="header-menu-div"> <a class="header-link"
-          href="www.doctoroncall.com.my/patient#/signup">Consult a Doctor </a></div>
-      <div class="header-menu-div header-more-content">
-        <a class="header-link desktop-only">More <svg class="header-more-icon" viewBox="0 0 50 50">
-            <path d="M 4.84375 12.90625 L 2.75 15 L 25 37.25 L 47.25 15 L 45.15625 12.90625 L 25 33.0625 Z ">
-            </path>
-          </svg></a>
-        <!-- start div for header content in desktop -->
-        <div class="header-dropdown-content">
-          <a href="aboutUs.html">About Us</a>
-          <a href="www.doctoroncall.com.my/tanya">Ask a Question</a>
-          <a href="www.doctoroncall.com.my/penyakit-a-z">Read Health Articles</a>
-          <a href="www.doctoroncall.com.my/>">FAQ</a>
-          <a href="media-page1.html">Media</a>
-          <a href="career.html">Careers</a>
-          <a href="panel-doctor.html">Panel Doctors</a>
-          <a href="corporate-partnership.html">Corporate Partnerships</a>
-          <a href="contactUs.html">Contact Us</a>
-        </div>
-      </div> 
-  
-    <a class="header-user-link" href="www.doctoroncall.com.my/patient#/dashboard">
-        <svg id="header-login-account" viewBox="0 0 20 20">
-            <path d="M10.1,0.1c-5.5,0-10,4.5-10,10c0,5.5,4.5,10,10,10c5.5,0,10-4.5,10-10C20.1,4.6,15.6,0.1,10.1,0.1z    M10.1,2.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9S6.2,8.3,6.2,6.1C6.2,3.9,7.9,2.2,10.1,2.2z M10.1,19.6   c-2.8,0-5.3-1.2-7-3.1c0-2.9,2.4-5.1,7-5.1s7,2.1,7,5.1C15.4,18.3,12.9,19.6,10.1,19.6z"/>
-        </svg>
+      <!-- start a tag for logo -->
+      <a href="https://www.doctoroncall.com.my"> <img class="header-logo" src="images/doctorOnCall-icon.png" alt="DoctorOnCall logo" loading="lazy">
       </a>
-  
-      <div class="header-menu-div-signup">
-        <a id="header-login-signup" class="button-login-signup desktop-only" onclick="redirectSignUp()" href="#">Sign Up / Login</a>
+      <!-- end of a tag for logo -->
+      <input class="header-menu-btn" type="checkbox" id="menu-btn" />
+      <label class="header-menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    
+      <!-- start ul for content in header -->
+      <div class="header-menu">
+    
+        <!--Mobile only login design-->
+        <div class="icon-userlogin mobile-only">
+          <!--<img src="/images/default-user.svg"> Container for user image-->
+          <a id="header-login-account-mobile" href="www.doctoroncall.com.my/patient#/dashboard">
+          <svg viewBox="0 0 172 172">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <path
+              d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z"
+              fill="#ebebeb"></path>
+            <path
+              d="M103.01725,106.50563c-0.4085,-4.43975 -0.24725,-7.53575 -0.24725,-11.5885c2.01025,-1.0535 5.6115,-7.77225 6.2135,-13.44825c1.58025,-0.129 4.07425,-1.66625 4.80525,-7.75075c0.387,-3.268 -1.17175,-5.10625 -2.1285,-5.68675c2.56925,-7.72925 7.912,-31.648 -9.8685,-34.1205c-1.83825,-3.21425 -6.52525,-4.8375 -12.60975,-4.8375c-24.37025,0.4515 -27.305,18.404 -21.96225,38.958c-0.95675,0.5805 -2.5155,2.41875 -2.1285,5.68675c0.74175,6.0845 3.225,7.62175 4.80525,7.75075c0.602,5.676 4.343,12.39475 6.364,13.44825c0,4.05275 0.1505,7.14875 -0.258,11.5885c-4.816,12.9645 -37.3455,9.32025 -38.8505,34.32475h104.576c-1.505,-25.0045 -33.89475,-21.36025 -38.71075,-34.32475z">
+            </path>
+            <path
+              d="M86,172c-47.49649,0 -86,-38.50351 -86,-86v0c0,-47.49649 38.50351,-86 86,-86v0c47.49649,0 86,38.50351 86,86v0c0,47.49649 -38.50351,86 -86,86z"
+              fill="none"></path>
+            <path
+              d="M86,168.56c-45.59663,0 -82.56,-36.96337 -82.56,-82.56v0c0,-45.59663 36.96337,-82.56 82.56,-82.56v0c45.59663,0 82.56,36.96337 82.56,82.56v0c0,45.59663 -36.96337,82.56 -82.56,82.56z"
+              fill="none"></path>
+          </svg>Sign Up / Login</a>
+          <a id="header-login-signup-mobile"  onclick="redirectSignUp()" href="/patient#/signup"> Sign Up / Login </a>
+        </div>
+    
+        <div class="header-menu-div"> <a class="header-link" href="www.doctoroncall.com.my/medicine">Order Medicine</a>
+        </div>
+        <div class="header-menu-div"> <a class="header-link"
+            href="www.doctoroncall.com.my/find-doctor">Book Appointment </a></div>
+        <div class="header-menu-div"> <a class="header-link"
+            href="www.doctoroncall.com.my/patient#/signup">Consult a Doctor </a></div>
+        <div class="header-menu-div header-more-content">
+          <a class="header-link desktop-only">More <svg class="header-more-icon" viewBox="0 0 50 50">
+              <path d="M 4.84375 12.90625 L 2.75 15 L 25 37.25 L 47.25 15 L 45.15625 12.90625 L 25 33.0625 Z ">
+              </path>
+            </svg></a>
+          <!-- start div for header content in desktop -->
+          <div class="header-dropdown-content">
+            <a href="aboutUs.html">About Us</a>
+            <a href="www.doctoroncall.com.my/tanya">Ask a Question</a>
+            <a href="www.doctoroncall.com.my/penyakit-a-z">Read Health Articles</a>
+            <a href="www.doctoroncall.com.my/>">FAQ</a>
+            <a href="media-page1.html">Media</a>
+            <a href="career.html">Careers</a>
+            <a href="panel-doctor.html">Panel Doctors</a>
+            <a href="corporate-partnership.html">Corporate Partnerships</a>
+            <a href="contactUs.html">Contact Us</a>
+          </div>
+        </div> 
+    
+      <a class="header-user-link" href="www.doctoroncall.com.my/patient#/dashboard">
+          <svg id="header-login-account" viewBox="0 0 20 20">
+              <path d="M10.1,0.1c-5.5,0-10,4.5-10,10c0,5.5,4.5,10,10,10c5.5,0,10-4.5,10-10C20.1,4.6,15.6,0.1,10.1,0.1z    M10.1,2.2c2.2,0,3.9,1.8,3.9,3.9c0,2.2-1.8,3.9-3.9,3.9S6.2,8.3,6.2,6.1C6.2,3.9,7.9,2.2,10.1,2.2z M10.1,19.6   c-2.8,0-5.3-1.2-7-3.1c0-2.9,2.4-5.1,7-5.1s7,2.1,7,5.1C15.4,18.3,12.9,19.6,10.1,19.6z"/>
+          </svg>
+        </a>
+    
+        <div class="header-menu-div-signup">
+          <a id="header-login-signup" class="button-login-signup desktop-only" onclick="redirectSignUp()" href="#">Sign Up / Login</a>
+        </div>
+    
       </div>
-  
-    </div>
-   
-  
-  
-    </div>
-    <!-- end of ul for content in header -->
-  </header>
-  <!-- end of header container -->
-  <!-- end of header -->
-        <div class="panel-doc-main-section">
-            <h1>Panel Doctors</h1>
-            <div class="panel-doc-main-subtext">Meet our experienced doctors who are always ready to help you. Our doctors are certified and registered under the Malaysian Ministry of Health and have years of experience in treating patients. </div>
-        </div>   
-
-        <!--Start section for Contributing Doctor-->
-        <section class="container-fluid">
-          
-            <h2 class="panel-doc-contribute">Contributing Doctors</h2>
-            <div class="row">
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrSashini-doctoroncall.jpg" class="panel-doc-contribute-img">
-              
-                <div class="panel-doctor-contribute-name">Dr Sashini Seeni </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">8 Years Experience</div>
-          
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrRamzdhan-doctoroncall.jpg" class="panel-doc-contribute-img">
-              
-                <div class="panel-doctor-contribute-name">Dr Ramzdhan  </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">8 Years Experience</div>
-              
-          
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images//DrSri-doctoroncall.jpg" class="panel-doc-contribute-img">
-              
-                <div class="panel-doctor-contribute-name">Dr Sri Viknarajan </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">7 Years Experience</div>
      
-          
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrRashid-doctoroncall.jpg" class="panel-doc-contribute-img">
-             
-                <div class="panel-doctor-contribute-name">Dr Rashid Khan </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">7 Years Experience</div>
-              
-          
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrNurSyuhada-doctoroncall.jpg" class="panel-doc-contribute-img">
-            
-                <div class="panel-doctor-contribute-name">Dr Nur Syuhada Zulkifli </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">7 Years Experience</div>
-             
-          
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrMohdKashfi-doctoroncall.jpg" class="panel-doc-contribute-img">
-              
-                <div class="panel-doctor-contribute-name">Dr Mohamad Kashfi Ahmad  </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">8 Years Experience</div>              
-           
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrFafa-doctoroncall.jpg" class="panel-doc-contribute-img">
-                <div class="panel-doctor-contribute-name">Dr Fatahiyah Abd Rahman</div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">8 Years Experience</div>
-              
-          
-            </div>
-          
-            <div class="col-md-3 col-xs-6 panel-doc-position">
-              <img loading="lazy" src="./images/DrNate-doctoroncall.jpg" class="panel-doc-contribute-img">
-             
-                <div class="panel-doctor-contribute-name">Dr Nathaniel Ho </div>
-                <div class="panel-doctor-contribute-desc">General Practitioner</div>
-                <div class="panel-doctor-contribute-desc">7 Years Experience</div>
-              
-          
+    
+    
+      </div>
+      <!-- end of ul for content in header -->
+    </header>
+    <!-- end of header container -->
+    <!-- end of header -->
+     
+          <!-- career-sub section -->
+            <div class="career-sub-container container-fluid">
+               <div class="row career-sub-row"> 
+              <div class="career-businessanalyst-img-col col-lg-5 col-sm-12"></div>
+              <div class="career-desc-col col-lg-7 col-sm-12">
+                  <div class="position-title">Business Analyst</div>
+                  <div class="position-type"> Internship </div>
+                  <p class="position-info"> Still studying? No photocopying or making tea here. Work on real business from day 1 </p>
+                  <button class="submit-btn"><a href="mailto:contact@doctoroncall.com.my" target="_top">Submit Application</a></button>
+              </div>
             </div>
             </div>
-          </section>
-          
-        <!--End section for Contributing Doctor-->
-            
 
- 
+            <div class="container career-detail">
+                <h3> Responsibilities</h3>
+                <div class="position-desc">
+                    <ul class="position-desc-task"> 
+                    <li> 1. Conduct data analysis and assess operational performance  </li>
+                    <li> 2. Conduct financial analysis and assess performance</li>
+                    <li> 3. Conduct research for retail pharmaceutical market, and support pricing analysis for pharmaceuticals  </li>
+                    <li> 4. Develop monthly investor reports </li>
+                </ul>
+                </div>
+                <h3> What We're Looking For</h3>
+                <ul class="position-desc-criteria">
+                    <li> Upcoming graduate from top-tier university in 2nd or 3rd year of study, no specific degree required</li>
+                    <li> Demonstratable analytical/numerical acumen and ability to generate and evaluate analysis </li>
+                    <li> Demonstratable business acumen and eagerness to learn </li>
+                    <li> Good team player and positive attitude</li>
+                    <li> Past internship experience in Consulting or Investment Banking is an advantage </li>
+                    <li> Ability to code is an advantage (e.g., R, Python, Excel) </li>
+                    <li> Excellent communication capability in English </li>
+                </ul>
+            </div>
+
+     
      <!-- start of footer-->
 <footer class="container-fluid footer">
     <!-- start div for upper footer -->
@@ -406,8 +348,6 @@
     <!-- end div for upper footer -->
   </footer>
   <!-- end of footer-->
-    </html>
-
-    </body>
-
+  </html>
+</body>
 </html>

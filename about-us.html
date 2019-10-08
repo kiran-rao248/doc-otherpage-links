@@ -1,9 +1,24 @@
 <!DOCTYPE html> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <head> 
         <title>About Us | DoctorOnCall</title> 
-        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Online Pharmacy, Buy precsription and OTC medicines, consult doctor online, book doctor appointments, ask free health questions">
+        <meta name="description" content="Buy prescription & OTC medicines online on DoctorOnCall's pharmacy. Book appointment with doctors & hospitals, ask free health questions,consult specialist online. Get 20% off & free delivery on purchase of medicines">
+        <meta name="author" content="">
+        <meta property="og:url" content="https://www.doctoroncall.com.my/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Malaysia's Online Pharmacy | Order Medicine, Consult Doctor Online">
+        <meta property="og:image" itemprop="image" content="https://www.doctoroncall.com.my/images/og_image_doc.png">
+        <meta property="og:description" content="Buy prescription & OTC medicines online on DoctorOnCall's pharmacy. Book appointment with doctors & hospitals, ask free health questions,consult specialist online. Get 20% off & free delivery on purchase of medicines">
+        <meta property="og:locale" content="en_US">
+        <meta name="url" content="https://www.doctoroncall.com.my/">
+        
+        <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="images/doctorOnCall-icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./stylesheets/bootstrap.grid.min.css">
         <link rel="stylesheet" href="./stylesheets/style-kiran.css">        
@@ -12,6 +27,11 @@
                 function redirectSignUp(){
             window.location.href= window.location.origin+"/patient#/signin?callback="+window.location.href;
           }
+            //Define shorthand id
+  function id(input){
+    return document.getElementById(input)
+  }
+  
         function checkLogin(){  
             var user=JSON.parse(window.localStorage.getItem("userDetails"))
             
@@ -85,15 +105,15 @@
               </svg></a>
             <!-- start div for header content in desktop -->
             <div class="header-dropdown-content">
-              <a href="aboutUs.html">About Us</a>
+              <a href="about-us.html">About Us</a>
               <a href="www.doctoroncall.com.my/tanya">Ask a Question</a>
               <a href="www.doctoroncall.com.my/penyakit-a-z">Read Health Articles</a>
               <a href="www.doctoroncall.com.my/>">FAQ</a>
-              <a href="media-page1.html">Media</a>
+              <a href="media.html">Media</a>
               <a href="career.html">Careers</a>
               <a href="panel-doctor.html">Panel Doctors</a>
               <a href="corporate-partnership.html">Corporate Partnerships</a>
-              <a href="contactUs.html">Contact Us</a>
+              <a href="contact-us.html">Contact Us</a>
             </div>
           </div> 
       
@@ -117,56 +137,64 @@
       <!-- end of header container -->
       <!-- end of header -->
 
+      <section class="container-fluid">
+          <div class="row">
+            <div class="aboutus-title">
+              <h1>About Us</h1>  
+            </div>
+          </div>
+        </section>
+
 
       <div class="about-us-video">      
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/RVuu9JLEp5E?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
       </div> 
       
+      <!--Top Section-->
 <div class="container">
-    <h1 class="about-us-h2">A Better Way To Get The Care You Need</h1>
+    <h2 class="about-us-h2">A Better Way To Get The Care You Need</h2>
         <div class="col-md-6">
                 
                 <p>
-                    Quality and affordable healthcare has always been the dream that we as 
-                      Malaysians strive to achieve for. Year by year, healthcare services has 
-                      improved significantly since the days of our fathers. But there is always a 
-                      problem that seems to be prevailed, long waiting lines. 
+                    Quality and affordable healthcare has always been the dream that we as Malaysians 
+                    strive to achieve. Year by year, healthcare services have improved significantly
+                     since the days of our fore-fathers, but there is always a problem that seems
+                      to prevail, long waiting lines.
                   </p>
           
                   <p>
-                          As a group of people that has a mutual deep passion in improving the 
-                          health care service in Malaysia, we gathered and worked together to 
-                          establish a platform that can improve the waiting time and availability of 
-                          healthcare anytime, anywhere to everyone without compromising the 
-                          quality and affordability. 
+                      As a group of people who have mutual deep passion in improving the health care 
+                      service in Malaysia, we gathered and worked together to establish a platform that
+                       can improve the waiting time and availability of healthcare anytime, anywhere to 
+                       everyone without compromising quality and affordability.
                   </p>
           
                   <p>
-                          Hence, on May 2016 DoctorOnCall was developed. DoctorOnCall is 
-                          Malaysia’s first online Medical Video-consultation platform that combines 
-                          advanced Video and voice technologies with the medical knowledge and 
-                          experience of Malaysia’s top doctors. It is the concept that has been proven 
-                          successful with millions of patients in US, Australia & Europe being treated 
-                          through Medical Video-consultation. 
+                      Hence, on May 2016 DoctorOnCall was founded. DoctorOnCall is Malaysia’s first online 
+                      Medical Video-consultation platform that combines advanced Video and voice technologies
+                       with the medical knowledge and experience of Malaysia’s top doctors. The concept has
+                        been proven successful with millions of patients in US, Australia & Europe who are 
+                        now being treated through Medical Video-consultation.
                   </p>
                 </div>
                 <div class="col-md-6">
                   <p> 
-                          DoctorOnCall provides fast, easy and cost-effective access to Malaysia’s top doctors and 
-                          other healthcare providers in the country. Our patients can have Medical Video visits on
-                          their smartphone or computers at any time of day and anywhere. We do this without making 
-                          any sacrifices on quality as our medical & mental health professional are carefully screened 
-                          and trained to conduct the Medical Video-consultation.  
+                      DoctorOnCall provides fast, easy and cost-effective access to Malaysia’s top doctors and
+                       other healthcare providers in the country. Our patients can have Medical Video visits 
+                       on their smartphone or computers at any time of day and anywhere. We do this without 
+                       making any sacrifice on quality as our medical & mental health professional are carefully 
+                       screened and trained to conduct Medical Video-consultations.
                   </p>
                   <p>
-                          We believe that this is the future of healthcare and together 
-                          with our medical & mental health providers will provide you 
-                          with better healthcare service at the more affordable cost.
+                      We believe that the the future of healthcare is digital and together with our medical &
+                       mental health providers will provide you with better healthcare service at more affordable cost.
                   </p>
                   </div>
 </div> 
+<!--End of Top Section-->
 
+<!--Middle Section (Mobile-Only)-->
 <section class="container-fluid search-container mobile-only">
   <div class="row aboutus-sub-row">
     <div class="col-md-5 col-sm-3 search-container">  
@@ -174,30 +202,33 @@
     </div>
 
     <div class=" col-md-7 col-sm-9 aboutus-second-row-2">
-      <h2 class="about-us-second-column-p-mobile">Making sure that we are providing a better healthcare service for you</h2><br>
+      <h2 class="about-us-second-column-p-mobile">Ensuring a better healthcare service for you</h2><br>
 
           <p class="about-us-second-column-p-mobile-2">
-                  Providing the best medical service to you is our top priority. To make sure you 
-                  receive the best healthcare service, our board-certified doctors have to go through a 
-                  very strict on-boarding process. Rigorous trainings and interviews will be provided 
-                  before any real life cases is assigned to our healthcare providers.
+              Providing the best medical service to you is our top priority. To make sure you receive 
+              the best healthcare service, our board-certified doctors have to go through a very strict 
+              on-boarding process. Rigorous trainings and interviews will be conducted before any real life 
+              cases are assigned to our healthcare providers.
                   
           </p>
 <br>
           <p class="about-us-second-column-p-mobile-2"> 
-            There are several things we do for you to receive the best service 
+              Several quality control steps we take for you to receive the best service include: 
 <ol>
-  <li>All doctors providing services on DoctorOnCall have a valid MMC Registration and Annual Practicing Certificate (APC)</li> 
-  <li>The doctors go through tele-consult training through 10-15 training calls with our assigned patients and Medical director</li> 
-  <li>Once our doctors obtain our standard requirement rating in training calls, the doctor will then be authorised to consult all patients</li>  
-  <li>DoctorOnCall does not compromise on privacy and applies standard safety procedures and protocols to TeleHealth services</li> 
-  <li class="aboutus-lastli">Medication delivery within 4 hours after consultation in Klang Valley, Johor Bharu & Penang Island</li>
+  <li>All doctors providing services on DoctorOnCall are required to have a valid Malaysian Medical Council (MMC) Registration and Annual Practicing Certificate (APC)</li> 
+  <li>The doctors go through tele-consult training through 10-15 training calls with our assigned patients and Medical Director</li> 
+  <li>Once our doctors obtain our standard requirement rating in training calls, doctors will then be authorised to consult patients</li>  
+  <li>DoctorOnCall does not compromise on privacy and applies industry standard safety procedures and protocols for TeleHealth services</li> 
+  <li class="aboutus-lastli">We offer medication delivery within 4 hours after consultation for Klang Valley, Johor Bharu & Penang Island</li>
 </ol>
           </p>
   </div>
   </div>
 </section>
+<!--End of Middle Section (Mobile-Only)-->
 
+
+<!--Middle Section (Desktop-Only)-->
 <section class="container-fluid search-container desktop-only">
     <div class="row aboutus-sub-row">
       <div class="col-md-4 col-sm-4 search-container">  
@@ -205,29 +236,31 @@
       </div>
   
       <div class="col-md-8 col-sm-8 aboutus-second-row-2-desktop">
-        <h2 class="about-us-second-column-p-header">Making sure that we are providing a better healthcare service for you</h2>
+        <h2 class="about-us-second-column-p-header">Ensuring a better healthcare service for you</h2>
   
             <p class="about-us-second-column-p">
-                    Providing the best medical service to you is our top priority. To make sure you 
-                    receive the best healthcare service, our board-certified doctors have to go through a 
-                    very strict on-boarding process. Rigorous trainings and interviews will be provided 
-                    before any real life cases is assigned to our healthcare providers.  
+                Providing the best medical service to you is our top priority. To make sure you receive the 
+                best healthcare service, our board-certified doctors have to go through a very strict on-boarding 
+                process. Rigorous trainings and interviews will be conducted before any real life cases are assigned
+                 to our healthcare providers.
               <br>
-              There are several things we do for you to receive the best service  
+              Several quality control steps we take for you to receive the best service include:
             </p>
               <p class="about-us-second-column-p">
               <ol>
-  <li>All doctors providing services on DoctorOnCall have a valid MMC Registration and Annual Practicing Certificate (APC) </li>
-  <li>The doctors go through tele-consult training through 10-15 training calls with our assigned patients and Medical director </li>
-  <li> Once our doctors obtain our standard requirement rating in training calls, the doctor will then be authorised to consult all patients </li>
-  <li>DoctorOnCall does not compromise on privacy and applies standard safety procedures and protocols to TeleHealth services </li>
-  <li>Medication delivery within 4 hours after consultation in Klang Valley, Johor Bharu & Penang Island </li>
+  <li>All doctors providing services on DoctorOnCall are required to have a valid Malaysian Medical Council (MMC) Registration and Annual Practicing Certificate (APC)</li>
+  <li>The doctors go through tele-consult training through 10-15 training calls with our assigned patients and Medical Director </li>
+  <li>Once our doctors obtain our standard requirement rating in training calls, doctors will then be authorised to consult patients</li>
+  <li>DoctorOnCall does not compromise on privacy and applies industry standard safety procedures and protocols for TeleHealth services</li>
+  <li>We offer medication delivery within 4 hours after consultation for Klang Valley, Johor Bharu & Penang Island</li>
 </ol>
             </p>
     </div>
     </div>
   </section>
+  <!--End of Middle Section (Desktop-Only)-->
 
+  <!--Ending Section (Mobile-Only)-->
 <section class="container-fluid search-container mobile-only">
   <div class="row aboutus-sub-row">  
 
@@ -236,36 +269,38 @@
   </div>
 
   <div class="col-md-9 col-sm-9">
-      <h2 class="about-us-second-column-p">Health Content on DoctorOnCall: About the doctors and medical contents</h2>
+      <h2 class="about-us-second-column-p">Health Content on DoctorOnCall: About our doctors and medical content</h2>
 
           <p class="about-us-second-column-p">
-            DoctorOnCall contains a vast collection of medical Q&A and advices are available<br>
-
-            <ol>
-               <li>All the answers from the Q&A provided are written by our board-certified doctors. </li>
-               <li>Information about popular medicines is written by a team of doctors and and pharmacists with a professional certificate in the respective languages.<br>
-               <li>Only board-certified doctors (with a minimum experience of 5 years) are allowed to reply on public website pages. 
-               <li>A team of editors will review & update the contents on the website on a regular basis. 
-              </ol>                 
+              DoctorOnCall contains a vast collection of medical advice with Questions and Answerse<br>
+  
+              <ol> 
+                  <li>All answers from the Q&A provided are written by our board-certified doctors</li>
+                  <li>Information about popular medicine is written by a team of doctors and pharmacists with professional certificate in their respective languages.</li>
+                  <li>Only board-certified doctors (with a minimum experience of 5 years) are allowed to reply on public web pages.</li>
+                  <li class="aboutus-lastli">A team of editors review & update the content on the website on a regular basis.</li>
+                 </ol>                  
           </p> 
   </div>
   </div>
 </section>
+<!--End of Ending Section (Mobile-Only)-->
 
+<!--Ending Section (Desktop-Only)-->
 <section class="container-fluid search-container desktop-only">
     <div class="row aboutus-sub-row">  
 
     <div class="col-lg-8 col-md-8 col-sm-9 aboutus-second-row-3">
-        <h2 class="about-us-second-column-p-head">Health Content on DoctorOnCall: About the doctors and medical contents</h2>
+        <h2 class="about-us-second-column-p-head">Health Content on DoctorOnCall: About our doctors and medical content </h2>
   
             <p class="about-us-second-column-p">
-              DoctorOnCall contains a vast collection of medical Q&A and advices are available<br>
+                DoctorOnCall contains a vast collection of medical advice with Questions and Answerse<br>
   
-              <ol>
-                  <li>All the answers from the Q&A provided are written by our board-certified doctors. </li>
-                  <li>Information about popular medicines is written by a team of doctors and and pharmacists with a professional certificate in the respective languages.<br>
-                  <li>Only board-certified doctors (with a minimum experience of 5 years) are allowed to reply on public website pages. 
-                  <li>A team of editors will review & update the contents on the website on a regular basis. 
+              <ol> 
+                  <li>All answers from the Q&A provided are written by our board-certified doctors</li>
+                  <li>Information about popular medicine is written by a team of doctors and pharmacists with professional certificate in their respective languages.</li>
+                  <li>Only board-certified doctors (with a minimum experience of 5 years) are allowed to reply on public web pages.</li>
+                  <li>A team of editors review & update the content on the website on a regular basis.</li>
                  </ol>                  
             </p> 
     </div>
@@ -276,6 +311,7 @@
       </div>
     </div>
   </section> 
+  <!--End of Ending Section (Desktop-Only)-->
 
     </body> 
     
@@ -318,13 +354,13 @@
         <div class="col-lg-2 col-xs-6 col-6 first-footer">
           <h3> DoctorOnCall </h3>
           <div class="footer-content">
-            <a href="aboutUs.html">About Us</a>
+            <a href="about-us.html">About Us</a>
             <a href="/privacyPolicy"> Privacy </a>
             <a href="/faq"> FAQ </a>
-            <a href="contactUs.html">Contact Us</a>
+            <a href="contact-us.html">Contact Us</a>
             <a href="/termsOfService"> Terms of Use</a>
             <a href="/doctor#/signin"> Doctors Login</a>
-            <a href="/media-page1.html">Media </a>
+            <a href="/media.html">Media </a>
           </div>
         </div>
         <!-- end div for column for DoctorOnCall -->
@@ -335,7 +371,7 @@
             <a href="tel:+60384082000">+60384082000</a>
             <a href="mailto:contact@doctoroncall.com.my" target="_top">contact@doctoroncall.com.my</a>
             <div class="footer-social-media">
-              <h3>Social</h3>
+              <h3>Social Media</h3>
               <a target="_blank" href="https://www.facebook.com/doctoroncallMY/" alt="DoctorOnCall Facebook Page">
                 <svg viewBox="0 0 172 172">
                   <path d="M0,172v-172h172v172z" fill="none"></path>
@@ -377,7 +413,7 @@
     <div class="container footer-sitemap ">
       <!-- start div for sitemap -->
       <div class="footer-sitemap-title">
-        <h2>Maps</h2>
+        <h2>Site Map</h2>
       </div>
       <!-- end div for sitemap-->
       <!-- start div for sitemap content -->

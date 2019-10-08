@@ -36,6 +36,65 @@ body{
   top:0;
 }
 
+ /*Scrollbar*/
+
+ ::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #888;
+}
+
+
+
+/*Horizontal scrollers*/
+.scroller::-webkit-scrollbar-track
+{
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.scroller::-webkit-scrollbar
+{
+    width: 4px;
+  height: 8px;
+    background-color: transparent;
+}
+
+.scroller::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    background-color: rgba(119, 118, 118, 0.2);
+}
+.scroller{
+  overflow: auto;
+  white-space: nowrap;
+}
+@media(max-width:768px)
+{
+  .scroller{
+    width:105%;
+  }
+}
+
+
+
 /* 1. Partnership CSS Style */
 
 
@@ -200,7 +259,7 @@ color: #41c0f1;
 }
 
 @media (max-width: 960px) {
-.header-link {
+  .header-link, .header-link:hover, .header-link:active, .header-link:visited, .header-link:checked {
   color: #000;
   padding: 20px 0 20px 20px;
   text-decoration: none;
